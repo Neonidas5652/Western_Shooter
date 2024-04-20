@@ -38,7 +38,7 @@ class Player(Entity):
             self.create_bullet(bullet_offset,self.bullet_direction)
             self.bullet_shot = True
        if self.status == "up_attack" and int(self.frame_index) == 2 and not self.bullet_shot:
-            bullet_offset = self.rect.center + self.bullet_direction + (30,-40) #alligns bullet to the gun when facing up or down
+            bullet_offset = self.rect.center + self.bullet_direction + (30,-40) #alligns bullet to the gun when facing up or down // int(self.frame_index) above overrides new position given..???
             self.create_bullet(bullet_offset,self.bullet_direction)
             self.bullet_shot = True 
             
